@@ -1,0 +1,159 @@
+Table:
+ 
+WebElement tab = driver.findElement(By.xpath(“”));
+WebElement thead = tab.findElement(By.tagName(“th”));
+WebElement row = tab.findElement(By.tagName(“tr”));
+for(int i=0;i<row;i++)
+{
+WebElement col=row.findElement(By.tagName(“td”));
+for(int j=I;j<=row;j++)
+{
+syso(col.get(j).getText());
+}
+}
+
+Window:
+
+String oldwindow= driver.getWindowHandle();
+
+WebElement btn1 = driver.findElement(by.id());
+Btn1.click();
+
+String handles = driver.getwindowHandles();
+
+for(String s : handles)
+{
+
+WebElement btn2 = driver.findElement(by.id());
+Btn2.click();
+
+Driver.close();
+
+driver.switchTo().window(oldwindow);
+
+}
+
+Frames:
+
+Driver.switchTo.frame(1);
+
+webElement fbtn1 = driver.findElement(by.id(“”));
+Fbtn1.click();
+
+
+Driver.switchTo().defaultContent();
+
+Driver.switchTo().frame(2);
+Driver.switchTo().frame(“iframe”);
+
+WebElement fbtn2 = driver.findElement(by.id(“”));
+
+driver.switchTo().defaultContent();
+
+JavaScript:
+
+JavascriptExecutor js = new JavascriptExecutor(driver);
+
+ js.executescript(“window.scrollTo(0,0)”);
+
+js.executescript((“window.srollBy(0,document.body.scrollHeight));
+
+Js.executescript(“arg[0].value=“txtbox”));
+
+js.executescript((“window.scrollBy(0,250)”);
+
+Wait:
+
+driver.manage().timeouts().implicitwait(10,TimeUnit.SECONDS);
+
+WebDriverWait w = new WebDriverWait(20, driver);
+w.until(expected conditions.elementToBeClickable(By.id(“”));
+
+Wait w  = new FluentWait(WebDriver, driver)
+		.withTimeout(Duration.OffSeconds(30)
+		.pollingEvery(duration.ofSeconds(3))
+		.ignoring(NosuchElementException.class);
+
+WebElement fwait = 	w.until(new Function<WebDriver, WebElement>(){
+Public WebElement Apply( WebDriver driver){
+Return driver.findElement(By.id(“”));
+}
+} );
+
+Alerts:
+
+Alert alert = driver.switchto().Alert(driver);
+alert.sendkeys(“Hello”);
+alert.getText();
+alert.accept();
+alert.dismiss();
+
+
+Actions:
+Actions actions = new Actions(driver);
+
+Sortable—
+
+WebElement srt = driver.findElement(By.xpath(“”));
+Actions.clickandHold(srt.get(7));
+actions.moveToElement(srt.get(5));
+actions.release(srt.get(5));
+actions.build().perform();
+
+Selectable——
+
+WebElement see = driver.findElement(By.xpath(“”));
+actions.clickandHold(sel.get(7));
+Actions.clickandHold(sel.get(5));
+actions.build().perform();
+
+Drag an Drop
+
+WebElement from = driver.findElement(By.id());
+WebElement to = driver.findElement(By.id());
+
+actions.moveToElement(from);
+actions.Release(to);
+actions.build().perform();
+
+File:
+
+Data Send :
+
+Sringfpath = “c://DataFile.xls”;
+
+FileInputStream fis = new FileInputStream(fpath);
+XSSFWorkBook book = new XSSFWorkBook(fis);
+XSSFSheet sheet = book.getSheet(“sheet1”);
+Int row = sheet.getLastRow();
+
+sendkeys(sheet.getCell(0).getRow(1).getStringcellvalue());
+
+FileUpload:
+
+WebELement fbtn = driver.findELement(By.id());
+Fbtn.click();
+
+String path = “”;
+StringSelection sel = new StringSelection(path);
+
+toolkit().getDefaultToolkit().getsystemClipboard().Selection(sel,null);
+
+Robot robot = new Robot();
+robot.keyPress(keyEvenet.VK_CONTROL);
+robot.KeyPress(KeyEvent.VK_V);
+Robot.keyRelease(KeyEvent.VK_V);
+robot.KeyRelease(KeyEvent.VK_CONTROL);
+robot.keyPress(KeyEvent.VK_ENTER);
+obot.keyRelease(KeyEvent.VK_ENTER);
+
+
+
+
+
+		
+
+
+
+
+
